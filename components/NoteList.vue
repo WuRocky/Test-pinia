@@ -1,3 +1,9 @@
+<script setup>
+import { useNoteStore } from "../stores/note";
+
+const noteStore = useNoteStore();
+</script>
+
 <template>
   <div class="noteList">
     <div v-for="note in noteStore.searchedNotes" class="note" :key="note.id">
@@ -8,11 +14,7 @@
     </div>
   </div>
 </template>
-<script setup>
-import { useNoteStore } from "../stores/note";
 
-const noteStore = useNoteStore();
-</script>
 <style scoped>
 .noteList {
   margin: 48px 0;
