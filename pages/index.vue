@@ -3,7 +3,7 @@
 
 <template>
     <main>
-    <h1>我的笔记本</h1>
+    <h1>我的筆記本</h1>
     <SearchNote />
     <NoteList />
     <AddNote />
