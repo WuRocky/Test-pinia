@@ -1,12 +1,11 @@
 <script setup>
-import { useNoteStore } from "../stores/note";
-
 const noteStore = useNoteStore();
+const { searchedNotes } = storeToRefs(noteStore);
 </script>
 
 <template>
   <div class="noteList">
-    <div v-for="note in noteStore.searchedNotes" class="note" :key="note.id">
+    <div v-for="note in searchedNotes" class="note" :key="note.id">
       <h2>{{ note.title }}</h2>
       <article>
         <p>{{ note.content }}</p>
